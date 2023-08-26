@@ -34,8 +34,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Mutated Rat Trap",
-    "path": "Mutated Rat Trap.yyp",
+    "name": "UI",
+    "path": "folders/UI.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

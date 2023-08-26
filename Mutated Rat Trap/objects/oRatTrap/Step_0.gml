@@ -59,8 +59,13 @@ switch (state)
 	break;
 	
 	case "snap":
-		if sprite_index != sRatTrapSnap sprite_index = sRatTrapSnap;
-		if image_index > 4 image_speed = 0;
+		if sprite_index != sRatTrapSnap 
+		{
+			sprite_index = sRatTrapSnap;
+			audio_play_sound(sClamp,1,0,1,0,random_range(0.5,1.5));	
+		}
+		if image_index > 4 image_speed = 0
+		if image_index > 3 && image_index < 4 instance_create_layer(x-5,y,"Trail",oGroundBash);
 		keyReload = mouse_check_button(mb_left);
 		if image_index > 3 && place_meeting(x,y,targetRat) && image_speed = 1
 		{
@@ -91,6 +96,7 @@ switch (state)
 		else image_index = 8;
 		if image_index == 8 
 		{
+			audio_play_sound(sSet,1,0);
 			state = "free";
 		}
 	break;
@@ -103,7 +109,11 @@ switch (state)
 		if instance_exists(caughtRat) 
 		{
 			//pointPop = caughtRat.points;
-			sprite_index = caughtRat.dSprite;
+			if sprite_index != caughtRat.dSprite
+			{
+				audio_play_sound(sCaught,1,0);
+				sprite_index = caughtRat.dSprite;
+			}
 		}
 	break;
 	
@@ -126,6 +136,9 @@ switch (state)
 		}
 	break;
 }
+
+//Check if mouse is outside room
+if (mouse_x > 370 || mouse_x < -10 || mouse_y < -10 || mouse_y > 190) acc = 0;
 
 speed = acc;
 

@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Mutated Rat Trap",
-    "path": "Mutated Rat Trap.yyp",
+    "name": "VFX",
+    "path": "folders/VFX.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -12,3 +12,6 @@ if (demo)
 	
 	
 }
+draw_set_font(global.numberFont);
+draw_text(28,5,global.score);
+draw_sprite(sScore,0,5,5);

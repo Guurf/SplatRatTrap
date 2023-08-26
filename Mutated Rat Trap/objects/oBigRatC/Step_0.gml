@@ -23,6 +23,7 @@ if timer == 0
 	{
 		image_index : points
 	});
+	audio_play_sound(sPoints,1,0,1,0,3);
 	global.score += 40;
 	instance_destroy();	
 }

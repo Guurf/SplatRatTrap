@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Mutated Rat Trap",
-    "path": "Mutated Rat Trap.yyp",
+    "name": "VFX",
+    "path": "folders/VFX.yy",
   },
   "parentObjectId": null,
   "persistent": false,
