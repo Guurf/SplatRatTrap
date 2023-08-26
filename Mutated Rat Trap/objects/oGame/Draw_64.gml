@@ -10,7 +10,6 @@ if (demo)
 	draw_text(10,130,"Speed: " + string(oRatTrap.speed));
 	draw_text(10,120,"Angle: " + string(oRatTrap.image_angle));
 	
-	
 }
 draw_set_font(global.numberFont);
 draw_text(28,5,global.score);

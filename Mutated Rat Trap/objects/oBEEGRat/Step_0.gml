@@ -12,6 +12,7 @@ if (caught)
 	mxPrevious = mouse_x;
 }
 //else if (image_index > 6 || image_index < 1) speed = 0;
+else if (image_index < 2) speed = 0;
 else speed = spd;
 
 

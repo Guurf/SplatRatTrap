@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.107551,
   "parent": {
-    "name": "Mutated Rat Trap",
-    "path": "Mutated Rat Trap.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,

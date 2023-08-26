@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sBEEGRat",
-    "path": "sprites/sBEEGRat/sBEEGRat.yy",
+    "name": "sBEEGRatTemp",
+    "path": "sprites/sBEEGRatTemp/sBEEGRatTemp.yy",
   },
   "spriteMaskId": null,
   "visible": true,

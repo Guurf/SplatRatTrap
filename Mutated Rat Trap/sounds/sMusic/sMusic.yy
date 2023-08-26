@@ -12,12 +12,12 @@
   "conversionMode": 0,
   "duration": 124.47346,
   "parent": {
-    "name": "Mutated Rat Trap",
-    "path": "Mutated Rat Trap.yyp",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "preload": false,
   "sampleRate": 44100,
   "soundFile": "sMusic.mp3",
   "type": 0,
-  "volume": 0.5,
+  "volume": 0.65,
 }

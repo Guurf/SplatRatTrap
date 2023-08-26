@@ -54,7 +54,6 @@ switch (state)
 		{
 			image_speed = 1;
 			state = "snap";
-			reload = 60;
 		}	
 	break;
 	
@@ -76,6 +75,7 @@ switch (state)
 		}
 		if (image_index > 4 && keyReload)
 		{
+			reload = 60;
 			state = "reload";
 		}	
 	break;
@@ -104,6 +104,7 @@ switch (state)
 	case "caught":
 		if !instance_exists(caughtRat) 
 		{
+			reload = 60;
 			state = "reload";
 		}
 		if instance_exists(caughtRat) 

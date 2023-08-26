@@ -9,6 +9,7 @@ if (caught)
 	{
 		timer--;
 	}
+	else breakout--;
 
 	rxPrevious = oRatTrap.x;
 }
@@ -28,3 +29,13 @@ if timer == 0
 	instance_destroy();	
 }
 
+if breakout == 0
+{
+	oRatTrap.reload = 60;
+	oRatTrap.state = "reload";
+	speed = spd;
+	image_alpha = 1;
+	caught = false;
+	audio_play_sound(sNyehHeh,1,0,1,0,random_range(0.8,1.5));
+	breakout = 60;
+}

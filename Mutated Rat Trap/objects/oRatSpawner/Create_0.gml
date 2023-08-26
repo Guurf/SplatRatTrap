@@ -2,8 +2,9 @@ spawnInterval = 200;
 spawnTimer = spawnInterval;
 
 spawnAmount = 1;
-spawnTypes = [oSmallRat,oSmallRat,oBigRat];
-r = irandom_range(0,2);
+spawnTypes = [oSmallRat];
+spawnTypeLength = array_length(spawnTypes)-1;
+r = irandom_range(0,spawnTypeLength);
 
 spawnX = irandom_range(x,x+64);
 topY = 8;
