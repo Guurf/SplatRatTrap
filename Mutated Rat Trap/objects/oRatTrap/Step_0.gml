@@ -1,27 +1,49 @@
-x = mouse_x;
-y = mouse_y;
+//Controls
+//x = mouse_x;
+//y = mouse_y;
 
+
+direction = point_direction(x,y,mouse_x,mouse_y);
+var mouseDis = point_distance(mouse_x,mouse_y,x,y);
+if mouseDis <= 15 && acc <= 4 acc -= 0.5;
+else if mouseDis <= 30 && acc > 4 acc -= 0.5;
+else acc+=0.25;
+if acc >= 5 acc = 5;
+else if acc <= 0 acc = 0;
+
+if (image_angle > 90) && (image_angle < 265) image_yscale = -1;
+else image_yscale = 1;
+
+//Assign Target Rat
 targetRat = instance_nearest(mouse_x,mouse_y,oRatParent);
 
+//Find Mouse Speed
 var mouseSpeed = point_distance(mouse_x,mouse_y,mxPrevious,myPrevious);
-show_debug_message(mouseSpeed);
 
-if mouseSpeed >= 3 && (mxPrevious != mouse_x && myPrevious != mouse_y) image_angle = point_direction(mxPrevious,myPrevious,x,y);
+//Point to Target Rat if close
+//if (distance_to_object(targetRat) < 10 && !targetRat.caught) image_angle = point_direction(x,y,targetRat.x,targetRat.y);
+
+//Point in opposite direction to mouse position last frame
+//else if mouseSpeed >= 1 && (mxPrevious != mouse_x && myPrevious != mouse_y) image_angle = point_direction(mxPrevious,myPrevious,x,y);
+if mouseDis > 10 image_angle = point_direction(mouse_x,mouse_y,x,y);
 mxPrevious = mouse_x;
 myPrevious = mouse_y;
 
-
+//Check for Powers
 if powered != "none"
 {
 	state = powered;	
 }
 
+//Trail
 if (trailTimer-- <= 0)
 {
 	var _randX = irandom_range(x-5,x+5);
 	instance_create_layer(_randX,y,"Trail",oTrail,);	
 	trailTimer = trailInterval;
 }
+
+//State Machine
 switch (state)
 {
 	case "free":
@@ -91,6 +113,7 @@ switch (state)
 		image_speed = 1;
 		if (keyCharge) 
 		{
+			acc = 0;
 			sprite_index = sRatTrapCharge;
 			if (image_index > 5) image_index = 4;
 		}
@@ -103,4 +126,6 @@ switch (state)
 		}
 	break;
 }
+
+speed = acc;
 

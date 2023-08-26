@@ -5,4 +5,4 @@ timer = 80;
 points = 2;
 
 
-mxPrevious = mouse_x;
+raPrevious = oRatTrap.image_angle;

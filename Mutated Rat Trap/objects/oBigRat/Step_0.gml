@@ -1,15 +1,15 @@
 if (caught)
 {
-	x = mouse_x;
-	y = mouse_y;
+	x = oRatTrap.x;
+	y = oRatTrap.y;
 	
 	speed = 0;
 	image_alpha = 0;
-	if (mouse_x != mxPrevious)
+	if (oRatTrap.image_angle != raPrevious)
 	{
 		 timer--;
 	}
-	mxPrevious = mouse_x;
+	raPrevious = oRatTrap.image_angle;
 }
 else if (image_index > 6 || image_index < 1) speed = 0;
 else speed = spd;

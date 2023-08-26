@@ -12,7 +12,7 @@ if (spawnTimer <= 0)
 			spawnInterval = 150;
 			r = irandom_range(0,3);
 		}
-		if (global.score > 100) 
+		else if (global.score > 100) 
 		{
 			spawnAmount = 2;
 			r = irandom_range(0,2);

@@ -7,7 +7,8 @@ if (demo)
 	draw_text(10,160,"Score: " + string(global.score));
 	draw_text(10,150,"Corruption: " + string(global.corruption));
 	draw_text(10,140,"State: " + string(oRatTrap.state));
-	draw_text(10,130,"Image Index: " + string(oRatTrap.image_index));
+	draw_text(10,130,"Speed: " + string(oRatTrap.speed));
+	draw_text(10,120,"Angle: " + string(oRatTrap.image_angle));
 	
 	
 }

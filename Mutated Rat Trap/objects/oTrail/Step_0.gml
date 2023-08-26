@@ -1,5 +1,5 @@
 lifetime++;
-if lifetime < 5
+if lifetime < 5 && image_index = 0
 {
 	image_angle = point_direction(x,y,oRatTrap.x,oRatTrap.y);	
 }

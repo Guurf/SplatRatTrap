@@ -4,7 +4,17 @@ if (caught)
 	image_alpha = 0;
 	timer--;
 }
-else speed = spd;
+else 
+{
+	//Trail
+	if (trailTimer-- <= 0)
+	{
+		var _randX = irandom_range(x+3,x+5);
+		instance_create_layer(_randX,y+4,"Trail",oTrail,{image_index : 1});	
+		trailTimer = trailInterval;
+	}
+	speed = spd;
+}
 
 
 if timer == 0
@@ -15,3 +25,4 @@ if timer == 0
 	});
 	instance_destroy();	
 }
+
