@@ -7,5 +7,10 @@ state = "free";
 reload = 0;
 powered = "none";
 
+trailTimer = 1;
+trailInterval = trailTimer;
+mxPrevious = mouse_x;
+myPrevious = mouse_y;
+
 
 pointPop = 0;

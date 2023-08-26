@@ -2,9 +2,25 @@ x = mouse_x;
 y = mouse_y;
 
 targetRat = instance_nearest(mouse_x,mouse_y,oRatParent);
+
+var mouseSpeed = point_distance(mouse_x,mouse_y,mxPrevious,myPrevious);
+show_debug_message(mouseSpeed);
+
+if mouseSpeed >= 3 && (mxPrevious != mouse_x && myPrevious != mouse_y) image_angle = point_direction(mxPrevious,myPrevious,x,y);
+mxPrevious = mouse_x;
+myPrevious = mouse_y;
+
+
 if powered != "none"
 {
 	state = powered;	
+}
+
+if (trailTimer-- <= 0)
+{
+	var _randX = irandom_range(x-5,x+5);
+	instance_create_layer(_randX,y,"Trail",oTrail,);	
+	trailTimer = trailInterval;
 }
 switch (state)
 {
