@@ -1,4 +1,5 @@
 draw_set_font(fGame);
+/*
 if (keyDemo && !demo) demo = 1;
 else if (keyDemo && demo) demo = 0;
 
@@ -11,6 +12,7 @@ if (demo)
 	draw_text(10,120,"Angle: " + string(oRatTrap.image_angle));
 	
 }
+*/
 if room != rMenu && global.corruption < 100
 {
 	draw_set_font(global.numberFont);

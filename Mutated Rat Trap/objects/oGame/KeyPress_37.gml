@@ -1,1 +1,0 @@
-global.corruption -= 1;

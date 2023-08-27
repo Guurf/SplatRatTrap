@@ -1,1 +1,0 @@
-global.score += 10;
