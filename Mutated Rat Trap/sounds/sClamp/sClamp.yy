@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.107551,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Trap",
+    "path": "folders/Sounds/Trap.yy",
   },
   "preload": false,
   "sampleRate": 44100,

@@ -14,7 +14,17 @@ if (caught)
 	rxPrevious = oRatTrap.x;
 }
 else if (image_index > 6 || image_index < 1) speed = 0;
-else speed = spd;
+else 
+{
+	//Trail
+	if (trailTimer-- <= 0)
+	{
+		var _randX = irandom_range(x+3,x+5);
+		instance_create_layer(_randX,y+4,"Trail",oTrail,{image_index : 1});	
+		trailTimer = trailInterval;
+	}
+	speed = spd;
+}
 
 
 
@@ -24,7 +34,7 @@ if timer == 0
 	{
 		image_index : points
 	});
-	audio_play_sound(sPoints,1,0,1,0,3);
+	audio_play_sound(sPoints,1,0,1,0,1);
 	global.score += 40;
 	instance_destroy();	
 }

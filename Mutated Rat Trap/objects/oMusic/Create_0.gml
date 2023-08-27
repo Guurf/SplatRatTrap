@@ -1,0 +1,1 @@
+if !audio_is_playing(sMusic) audio_play_sound(sMusic,1,1);

@@ -1,7 +1,14 @@
-event_inherited()
-spd = 0.2;
-dSprite = sBigRatD;
-timer = 80;
+caught = false;
+dSprite = sBEEGRatD;
+timer = 20;
 points = 4;
 
-mxPrevious = mouse_x;
+trailTimer = 5;
+trailInterval = trailTimer;
+scale = 1;
+
+image_index = irandom_range(0,4);
+hp = 3;
+spd = 0.5;
+speed = spd;
+direction = 180;

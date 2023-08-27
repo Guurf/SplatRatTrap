@@ -9,7 +9,7 @@ else
 	//Trail
 	if (trailTimer-- <= 0)
 	{
-		var _randX = irandom_range(x+3,x+5);
+		var _randX = irandom_range(x+7,x+9);
 		instance_create_layer(_randX,y+4,"Trail",oTrail,{image_index : 1});	
 		trailTimer = trailInterval;
 	}

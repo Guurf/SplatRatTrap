@@ -8,7 +8,7 @@ if timer == 0
 	{
 		image_index : points
 	});
-	audio_play_sound(sPoints,1,0,1,0,1.5);
+	audio_play_sound(sPoints,1,0,1,0,2);
 	global.score += 20;
 	instance_destroy();	
 }

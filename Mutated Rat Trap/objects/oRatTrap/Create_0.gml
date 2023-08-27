@@ -14,6 +14,6 @@ trailTimer = 1;
 trailInterval = trailTimer;
 mxPrevious = mouse_x;
 myPrevious = mouse_y;
-
+chunkTime = 30;
 
 pointPop = 0;

@@ -1,7 +1,6 @@
 spawnTimer--;
 
 spawnTypeLength = array_length(spawnTypes)-1;
-show_debug_message(spawnTypeLength);
 
 if (spawnTimer <= 0)
 {
@@ -45,15 +44,16 @@ if (global.corruption < 5)
 }
 else if (global.corruption < 10)
 {
+	spawnInterval = 250;
 	spawnTypes = [oSmallRat, oSmallRatC, oBigRat];	
 }
 else if (global.corruption < 15)
 {
+	spawnInterval = 300;
 	spawnTypes = [oSmallRat, oSmallRatC, oBigRat, oBigRatC];	
 }
 else if (global.corruption < 30)
 {
-	spawnInterval = 250;
 	spawnTypes = [oSmallRat, oSmallRatC, oBigRat, oBigRatC];	
 }
 else if (global.corruption < 40)
@@ -61,10 +61,11 @@ else if (global.corruption < 40)
 	spawnInterval = 200;
 	spawnTypes = [oSmallRat, oSmallRatC, oBigRat, oBigRatC];	
 }
-else if (global.corruption < 70)
+else if (global.corruption < 60)
 {
 	spawnInterval = 250;
 	spawnTypes = [oSmallRat, oSmallRatC, oBigRat, oBigRatC, oBEEGRat];	
 }
+else if (global.corruption == 100) instance_destroy();
 
 

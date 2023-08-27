@@ -8,11 +8,13 @@ var mouseDis = point_distance(mouse_x,mouse_y,x,y);
 if mouseDis <= 15 && acc <= 4 acc -= 0.5;
 else if mouseDis <= 30 && acc > 4 acc -= 0.5;
 else acc+=0.25;
-if acc >= 5 acc = 5;
+if acc >= 4 acc = 4;
 else if acc <= 0 acc = 0;
 
 if (image_angle > 90) && (image_angle < 265) image_yscale = -1;
 else image_yscale = 1;
+
+if global.corruption >= 60 depth = -999;
 
 //Assign Target Rat
 targetRat = instance_nearest(mouse_x,mouse_y,oRatParent);
@@ -58,13 +60,17 @@ switch (state)
 	break;
 	
 	case "snap":
+		
 		if sprite_index != sRatTrapSnap 
 		{
 			sprite_index = sRatTrapSnap;
 			audio_play_sound(sClamp,1,0,1,0,random_range(0.5,1.5));	
 		}
 		if image_index > 4 image_speed = 0
-		if image_index > 3 && image_index < 4 instance_create_layer(x-5,y,"Trail",oGroundBash);
+		if image_index > 3 && image_index < 4 
+		{
+			instance_create_layer(x-5,y,"Trail",oGroundBash);
+		}
 		keyReload = mouse_check_button(mb_left);
 		if image_index > 3 && place_meeting(x,y,targetRat) && image_speed = 1
 		{
@@ -107,13 +113,23 @@ switch (state)
 			reload = 60;
 			state = "reload";
 		}
-		if instance_exists(caughtRat) 
+		else if instance_exists(caughtRat) 
 		{
 			//pointPop = caughtRat.points;
 			if sprite_index != caughtRat.dSprite
 			{
 				audio_play_sound(sCaught,1,0);
 				sprite_index = caughtRat.dSprite;
+			}
+			if sprite_index == sBEEGRatD
+			{
+				chunkTime--;
+				if chunkTime <= 0
+				{
+					reload = 60;
+					state = "reload";
+					chunkTime = 30;
+				}
 			}
 		}
 	break;
@@ -124,6 +140,7 @@ switch (state)
 		image_speed = 1;
 		if (keyCharge) 
 		{
+			if !audio_is_playing(sCharge) && image_index < 3 audio_play_sound(sCharge,1,0);
 			acc = 0;
 			sprite_index = sRatTrapCharge;
 			if (image_index > 5) image_index = 4;
@@ -133,6 +150,8 @@ switch (state)
 		{
 			state = "reload";
 			powered = "none";
+			if audio_is_playing(sCharge) audio_stop_sound(sCharge);
+			audio_play_sound(sShoot,1,0);
 			instance_create_layer(x,y,"Laser",oLaser);
 		}
 	break;
