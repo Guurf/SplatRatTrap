@@ -5,10 +5,19 @@
 
 direction = point_direction(x,y,mouse_x,mouse_y);
 var mouseDis = point_distance(mouse_x,mouse_y,x,y);
-if mouseDis <= 15 && acc <= 4 acc -= 0.5;
+if mouseDis <= 20 && acc <= 4 acc -= 0.5;
 else if mouseDis <= 30 && acc > 4 acc -= 0.5;
 else acc+=0.25;
-if acc >= 4 acc = 4;
+if acc >= 4 && mouseDis <= 70 
+{
+	acc = 4;
+	trailInterval = 1;
+}
+else if acc >= 6 
+{
+	acc = 6;
+	trailInterval = 0.25;
+}
 else if acc <= 0 acc = 0;
 
 if (image_angle > 90) && (image_angle < 265) image_yscale = -1;
@@ -41,7 +50,7 @@ if powered != "none"
 if (trailTimer-- <= 0)
 {
 	var _randX = irandom_range(x-5,x+5);
-	instance_create_layer(_randX,y,"Trail",oTrail,);	
+	instance_create_layer(_randX,y,"Trail",oTrail);	
 	trailTimer = trailInterval;
 }
 
@@ -158,7 +167,7 @@ switch (state)
 }
 
 //Check if mouse is outside room
-if (mouse_x > 370 || mouse_x < -10 || mouse_y < -10 || mouse_y > 190) acc = 0;
+//if (mouse_x > 370 || mouse_x < -10 || mouse_y < -10 || mouse_y > 190) acc = 0;
 
 speed = acc;
 

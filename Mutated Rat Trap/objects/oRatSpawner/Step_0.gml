@@ -47,7 +47,7 @@ else if (global.corruption < 10)
 	spawnInterval = 250;
 	spawnTypes = [oSmallRat, oSmallRatC, oBigRat];	
 }
-else if (global.corruption < 15)
+else if (global.corruption < 20)
 {
 	spawnInterval = 300;
 	spawnTypes = [oSmallRat, oSmallRatC, oBigRat, oBigRatC];	
