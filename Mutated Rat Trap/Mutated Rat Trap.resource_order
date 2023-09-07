@@ -62,7 +62,7 @@
     {"name":"sBEEGRatD","order":5,"path":"sprites/sBEEGRatD/sBEEGRatD.yy",},
     {"name":"sSmallRatC","order":4,"path":"sprites/sSmallRatC/sSmallRatC.yy",},
     {"name":"sBigRat","order":1,"path":"sprites/sBigRat/sBigRat.yy",},
-    {"name":"sItchBG","order":9,"path":"sprites/sItchBG/sItchBG.yy",},
+    {"name":"sRoad","order":9,"path":"sprites/sRoad/sRoad.yy",},
     {"name":"sCaught","order":1,"path":"sounds/sCaught/sCaught.yy",},
     {"name":"oFollow","order":8,"path":"objects/oFollow/oFollow.yy",},
     {"name":"oTitle","order":7,"path":"objects/oTitle/oTitle.yy",},

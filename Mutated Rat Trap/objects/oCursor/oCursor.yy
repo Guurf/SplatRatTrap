@@ -32,5 +32,5 @@
     "path": "sprites/sCursor/sCursor.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

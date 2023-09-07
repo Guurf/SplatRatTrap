@@ -91,7 +91,7 @@
     {"id":{"name":"sBEEGRatD","path":"sprites/sBEEGRatD/sBEEGRatD.yy",},},
     {"id":{"name":"sSmallRatC","path":"sprites/sSmallRatC/sSmallRatC.yy",},},
     {"id":{"name":"sBigRat","path":"sprites/sBigRat/sBigRat.yy",},},
-    {"id":{"name":"sItchBG","path":"sprites/sItchBG/sItchBG.yy",},},
+    {"id":{"name":"sRoad","path":"sprites/sRoad/sRoad.yy",},},
     {"id":{"name":"sCaught","path":"sounds/sCaught/sCaught.yy",},},
     {"id":{"name":"oFollow","path":"objects/oFollow/oFollow.yy",},},
     {"id":{"name":"oTitle","path":"objects/oTitle/oTitle.yy",},},
